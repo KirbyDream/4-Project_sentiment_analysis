@@ -12,7 +12,6 @@ def get_everything_from_character(name):
     query = f"""SELECT * 
     FROM script
     WHERE name = '{name}';"""
-
     df = pd.read_sql_query(query, engine)
     return df.to_dict(orient="records")
 
@@ -21,6 +20,8 @@ def get_just_dialogue(name):
     query = f"""SELECT text 
     FROM script
     WHERE name = '{name}';"""
+    df = pd.read_sql_query(query, engine)
+    return df.to_dict(orient="records")
 
 
 def get_just_dialogue_episode(name, episode):
@@ -29,7 +30,6 @@ def get_just_dialogue_episode(name, episode):
     WHERE name = '{name}'
     and idepisode = '{episode}';
     """
-
     df = pd.read_sql_query(query, engine)
     return df.to_dict(orient="records")
 
