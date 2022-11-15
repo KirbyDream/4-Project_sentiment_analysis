@@ -51,6 +51,7 @@ def sa_from_character_episode(name, episode):
     # return jsonify(everything)
     return jsonify([sia.polarity_scores(i["text"])["compound"] for i in everything])
 
+
 # POST
 
 

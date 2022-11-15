@@ -39,6 +39,5 @@ def insert_one_row(episode, name, text):
      (`text`, idepisode, name) 
         VALUES ({text}, '{episode}', '{name}');
     """
-
     engine.execute(query)
     return f"Correctly introduced!"
