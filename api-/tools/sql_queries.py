@@ -34,6 +34,15 @@ def get_just_dialogue_episode(name, episode):
     return df.to_dict(orient="records")
 
 
+def get_dialogue_all_episodes():
+    query = f"""SELECT  idepisode, GROUP_CONCAT(text SEPARATOR ' ') as text
+FROM script
+group by idepisode;
+    """
+    df = pd.read_sql_query(query, engine)
+    return df.to_dict(orient="records")
+
+
 def insert_one_row(episode, name, text):
     query = f"""INSERT INTO script
      (`text`, idepisode, name) 

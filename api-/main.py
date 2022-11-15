@@ -52,6 +52,12 @@ def sa_from_character_episode(name, episode):
     return jsonify([sia.polarity_scores(i["text"])["compound"] for i in everything])
 
 
+@app.route("/sa/allepisodes/", )
+def sa_from_all_episode():
+    everything = esecuele.get_dialogue_all_episodes()
+    # return jsonify(everything)
+    return jsonify([sia.polarity_scores(i["text"])["compound"] for i in everything])
+
 # POST
 
 
