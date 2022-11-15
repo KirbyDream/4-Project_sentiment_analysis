@@ -19,5 +19,18 @@ step 3 : Using Flask I created an API that connects to my database and retrieves
 
               http://127.0.0.1:9000/sa/allepisodes
 
-## Sentiment analysis
 
+<img width="405" alt="df" src="images/df.png">
+
+
+
+## Sentiment analysis
+The sentiment analysis was performed using the API queries for the characters with the most dialogue, Sheriff Truman and Agent Cooper seem to be neutral overall, that is mainly because they are leading the investigation, and requiered to be impartial.
+
+
+![sa_charac](images/sa_charac.png)
+
+
+For the second sentiment analysis, we focused on episode to get the overall sentiment over the course of the season.
+
+![overall](images/overall.png)
