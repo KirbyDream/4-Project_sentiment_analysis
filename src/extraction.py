@@ -76,3 +76,17 @@ def insertScript(script, idepisode, idname):
 def insertEpisode(number, season):
     engine.execute(
         f"INSERT INTO episode (number, season) VALUES ('{number}','{season}');")
+
+
+def getcompound(name_):
+    sql_df = pd.read_sql_query(
+    f"""
+    SELECT * from SCRIPT
+    WHERE script.name = '{name_}';
+    """, engine)
+    df_polarity = requests.get(f"http://127.0.0.1:9000/sa/{name_}/").json()
+    polarity_series = pd.Series(df_polarity)
+    df_with_compound = pd.concat([sql_df,polarity_series], axis=1)
+    df_with_compound.rename({0:"Compound"}, axis='columns', inplace=True)
+    return df_with_compound
+    
