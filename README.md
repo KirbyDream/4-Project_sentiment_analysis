@@ -1,4 +1,7 @@
 # 4-Project_sentiment_analysis
+
+ ![twin_peaks](images/twin_peaks.jpg)
+
 ## Selma Laarabi
 ## Introduction
 In this project we are going to use the ETL methods to perform sentiment analysis on the script of the first season of the Twin Peaks series.
@@ -34,3 +37,9 @@ The sentiment analysis was performed using the API queries for the characters wi
 For the second sentiment analysis, we focused on episode to get the overall sentiment over the course of the season.
 
 ![overall](images/overall.png)
+
+
+## WordCloud
+
+![download](images/download.png)
+
